@@ -9,6 +9,7 @@ import json
 import requests
 from datetime import datetime, timedelta
 import pytz
+import re
 
 def load_config():
     """Load configuration from JSON file"""
@@ -28,7 +29,11 @@ def get_github_stats(username):
                 'public_repos': data.get('public_repos', 0),
                 'followers': data.get('followers', 0),
                 'following': data.get('following', 0),
-                'created_at': data.get('created_at', '')
+                'created_at': data.get('created_at', ''),
+                'name': data.get('name', username),
+                'bio': data.get('bio', ''),
+                'location': data.get('location', ''),
+                'company': data.get('company', '')
             }
     except Exception as e:
         print(f"Error fetching GitHub stats: {e}")
@@ -68,6 +73,29 @@ def update_readme():
     with open(readme_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
+    # Update GitHub stats section
+    stats_section = f"""## 📊 GitHub Stats
+- 📁 **Public Repositories**: {github_stats.get('public_repos', 0)}
+- 👥 **Followers**: {github_stats.get('followers', 0)}
+- 👤 **Following**: {github_stats.get('following', 0)}
+- 🏢 **Company**: {github_stats.get('company', 'N/A')}
+- 📍 **Location**: {github_stats.get('location', 'N/A')}
+
+"""
+    
+    # Replace GitHub stats section
+    stats_pattern = r"## 📊 GitHub Stats\n.*?\n\n"
+    if re.search(stats_pattern, content, re.DOTALL):
+        content = re.sub(stats_pattern, stats_section, content, flags=re.DOTALL)
+    else:
+        # Add stats section after About Me if it doesn't exist
+        about_pos = content.find("## 🚀 About Me")
+        if about_pos != -1:
+            end_pos = content.find("## ", about_pos + 1)
+            if end_pos == -1:
+                end_pos = len(content)
+            content = content[:end_pos] + stats_section + content[end_pos:]
+    
     # Update status section
     status_section = f"""## 🌟 Current Status
 - 🔒 **Working on**: {current_status['working_on']}
@@ -98,6 +126,7 @@ def update_readme():
         f.write(content)
     
     print("README updated successfully!")
+    print(f"📊 GitHub Stats: {github_stats.get('public_repos', 0)} repos, {github_stats.get('followers', 0)} followers")
 
 if __name__ == "__main__":
     update_readme() 
