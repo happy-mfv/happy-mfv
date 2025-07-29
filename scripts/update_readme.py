@@ -73,8 +73,16 @@ def update_readme():
     with open(readme_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Update GitHub stats section
+    # Update GitHub stats section with Anurag's style
     stats_section = f"""## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username={username}&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=FFFFFF&icon_color=58A6FF)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username={username}&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=FFFFFF)
+
+![GitHub Streak](https://streak-stats.demolab.com/?user={username}&theme=radical&hide_border=true&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF)
+
+### 📈 Profile Stats
 - 📁 **Public Repositories**: {github_stats.get('public_repos', 0)}
 - 👥 **Followers**: {github_stats.get('followers', 0)}
 - 👤 **Following**: {github_stats.get('following', 0)}
