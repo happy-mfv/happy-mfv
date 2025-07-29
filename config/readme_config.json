@@ -1,0 +1,25 @@
+{
+  "github_username": "happy-mfv",
+  "timezone": "Asia/Tokyo",
+  "status": {
+    "working_on": "Cloud Security Automation",
+    "learning": "Advanced Kubernetes Security",
+    "goal": "Implementing AI-powered DevSecOps workflows"
+  },
+  "skills": {
+    "primary": ["Python", "Azure", "AWS", "Docker", "Kubernetes", "Terraform"],
+    "secondary": ["DevSecOps", "CI/CD", "Cloud Security", "Machine Learning"]
+  },
+  "social_links": {
+    "linkedin": "https://www.linkedin.com/in/happy-mfv",
+    "email": "nguyen.huu.hy@moneyforward.co.jp"
+  },
+  "themes": {
+    "github_stats": "radical",
+    "colors": {
+      "primary": "58A6FF",
+      "background": "0D1117",
+      "text": "FFFFFF"
+    }
+  }
+} 
