@@ -1626,6 +1626,17 @@ I'm passionate about automating, securing, and optimizing cloud-native environme
 ![GitHub Streak](https://streak-stats.demolab.com/?user=happy-mfv&theme=radical&hide_border=true&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF)
 
 ### 📈 Profile Stats
+- 📁 **Public Repositories**: 7
+- 👥 **Followers**: 0
+- 👤 **Following**: 0
+- 🏢 **Company**: @moneyforward 
+- 📍 **Location**: Ho Chi Minh City
+
+![Top Languages](https://happy-status.vercel.app/api/top-langs/?username=happy-mfv&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=FFFFFF)
+
+![GitHub Streak](https://streak-stats.demolab.com/?user=happy-mfv&theme=radical&hide_border=true&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF)
+
+### 📈 Profile Stats
 - 📁 **Public Repositories**: 0
 - 👥 **Followers**: 0
 - 👤 **Following**: 0
@@ -7583,7 +7594,7 @@ I'm passionate about automating, securing, and optimizing cloud-native environme
 - 🔒 **Working on**: Cloud Security Automation
 - 🚀 **Learning**: Advanced Kubernetes Security
 - 🎯 **Goal**: Implementing AI-powered DevSecOps workflows
-- 📅 **Last Updated**: 2026-01-16 11:21 JST
+- 📅 **Last Updated**: 2026-01-16 15:45 JST
 
 ---
 
